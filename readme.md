@@ -1,7 +1,7 @@
-# Library OSP Result codes - _aoresult_
+# OSP ResultCodes aoresult
 
-Library "OSP Result codes - _aoresult_" is one of the **aolibs**; 
-short for Arduino OSP libraries from ams-OSRAM.
+Library "OSP ResultCodes aoresult", usually abbreviated to "aoresult",
+is one of the **aolibs**; short for Arduino OSP libraries from ams-OSRAM.
 This suite implements support for chips that use the Open System Protocol, 
 like the AS1163 ("SAID") or the OSIRE E3731i ("RGBi").
 The landing page for the _aolibs_ is on 
@@ -15,14 +15,14 @@ It contains (defines) a list of all error codes that
 may occur in any of the _aolibs_.
 As a result, library _aoresult_ is relatively empty.
 
-![aoresult in context](extra/aolibs-aoresult.drawio.png)
+![aoresult in context](extras/aolibs-aoresult.drawio.png)
 
 
 ## Examples
 
 This library comes with the following examples.
 You can find them in the Arduino IDE via 
-File > Examples > OSP Result codes - aoresult > ...
+File > Examples > OSP ResultCodes aoresult > ...
 
 -  **aoresult_demo**  
    This demo shows how to use the result codes from the aoresult lib.
@@ -48,10 +48,14 @@ Here is a quick overview:
 
 ## Version history _aoresult_
 
+- **2024 July 7, 0.2.0**  
+  - Arduino name changed from `OSP Result codes - aoresult` to `OSP ResultCodes aoresult`.
+  - Renamed dir `extra` to `extras`.
+
 - **2024 July 3, 0.1.11**  
-  - `license.txt`, `aoresult_demo.ino` line endings changed from LF to CR+LF
+  - `license.txt`, `aoresult_demo.ino` line endings changed from LF to CR+LF.
 
 - **2024 July 02, 0.1.10**  
-  Initial release candidate
+  - Initial release candidate.
 
 (end)
