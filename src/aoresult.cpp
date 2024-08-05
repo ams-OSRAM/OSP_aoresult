@@ -76,11 +76,11 @@ const char * aoresult_to_str(aoresult_t result, int verbose) {
     @note   If there is no \ or / returns `file`.
 */
 const char * aoresult_shorten( const char * file) {
- char * p;
- p= strrchr(file, '/');
- if( p!=0 ) return p+1;
- p= strrchr(file, '\\');
- if( p!=0 ) return p+1;
+  char * p;
+  p= strrchr(file, '/');
+  if( p!=0 ) return p+1;
+  p= strrchr(file, '\\');
+  if( p!=0 ) return p+1;
   return file; 
 }
 

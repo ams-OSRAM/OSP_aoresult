@@ -5,7 +5,7 @@ is one of the **aolibs**; short for Arduino OSP libraries from ams-OSRAM.
 This suite implements support for chips that use the Open System Protocol, 
 like the AS1163 ("SAID") or the OSIRE E3731i ("RGBi").
 The landing page for the _aolibs_ is on 
-[GitHub](https://github.com/ams-OSRAM-Group/aotop).
+[GitHub](https://github.com/ams-OSRAM-Group/OSP_aotop).
 
 
 ## Introduction
@@ -47,6 +47,11 @@ Here is a quick overview:
 
 
 ## Version history _aoresult_
+
+- **2024 August 5, 0.2.1**  
+  - Corrected landing page link in readme.md from aotop to OSP_aotop.
+  - Remove "oalib" from `sentence=` in `library.properties`.
+  - Extra (indent) spaces in `aoresult_shorten()`.
 
 - **2024 July 7, 0.2.0**  
   - Arduino name changed from `OSP Result codes - aoresult` to `OSP ResultCodes aoresult`.
