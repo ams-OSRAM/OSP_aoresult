@@ -48,6 +48,9 @@ Here is a quick overview:
 
 ## Version history _aoresult_
 
+- **2024 aug 9, 0.3.0**
+  - Added error `aoresult_sys_wrongtopo`.
+
 - **2024 August 5, 0.2.1**  
   - Corrected landing page link in readme.md from aotop to OSP_aotop.
   - Remove "oalib" from `sentence=` in `library.properties`.

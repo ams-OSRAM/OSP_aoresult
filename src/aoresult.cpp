@@ -57,6 +57,8 @@ const char * aoresult_to_str(aoresult_t result, int verbose) {
     
     case aoresult_sys_cabling      : return verbose==0 ? "sys_cabling"     : "Resetinit failed: cable (loop) or terminator (bidir) missing";
     case aoresult_sys_id           : return verbose==0 ? "sys_id"          : "Unexpected or unknown OSP node ID";
+    case aoresult_sys_wrongtopo    : return verbose==0 ? "sys_wrongtopo"   : "Actual OSP chain topology deviates from expected";
+
 
     case aoresult_dev_noi2cbridge  : return verbose==0 ? "dev_noi2cbridge" : "Missing (OSP node with) I2C bridge";
     case aoresult_dev_noi2cdev     : return verbose==0 ? "dev_noi2cdev"    : "Missing specific I2C device (eg when app needs EEPROM or IOExpander)";
