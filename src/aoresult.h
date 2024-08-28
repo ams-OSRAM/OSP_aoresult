@@ -23,7 +23,7 @@
 
 
 // Identifies lib version
-#define AORESULT_VERSION "0.3.0"
+#define AORESULT_VERSION "0.4.0"
 
 
 // For detailed meaning, see aoresult_to_str()
@@ -53,6 +53,7 @@ typedef enum aoresult_e {
   aoresult_sys_cabling     = 30,
   aoresult_sys_id          = 31,
   aoresult_sys_wrongtopo   = 32,
+  aoresult_sys_nodecfg     = 33,
   
   // Errors for attached devices
   aoresult_dev_noi2cbridge = 40,

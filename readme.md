@@ -24,7 +24,7 @@ This library comes with the following examples.
 You can find them in the Arduino IDE via 
 File > Examples > OSP ResultCodes aoresult > ...
 
--  **aoresult_demo**  
+-  **aoresult_demo** ([source](examples/aoresult_demo))  
    This demo shows how to use the result codes from the aoresult lib.
    It also demonstrates the "assert" feature.
 
@@ -47,6 +47,10 @@ Here is a quick overview:
 
 
 ## Version history _aoresult_
+
+- **2024 aug 28, 0.4.0**
+  - Added links in `readme.md` for all example sketches.
+  - Added error `aoresult_sys_nodecfg`.
 
 - **2024 aug 9, 0.3.0**
   - Added error `aoresult_sys_wrongtopo`.
