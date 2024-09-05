@@ -24,9 +24,13 @@ This library comes with the following examples.
 You can find them in the Arduino IDE via 
 File > Examples > OSP ResultCodes aoresult > ...
 
--  **aoresult_demo** ([source](examples/aoresult_demo))  
-   This demo shows how to use the result codes from the aoresult lib.
-   It also demonstrates the "assert" feature.
+- **aoresult_demo** ([source](examples/aoresult_demo))  
+  This demo shows how to convert the result codes from the aoresult lib
+  to strings.
+
+- **aoresult_assert** ([source](examples/aoresult_assert))  
+  This demo shows how to use the assert feature of the aoresult library.
+  Patch the definition of `AORESULT_ASSERT` if a debugger is attached.
 
 
 ## API
@@ -39,14 +43,19 @@ Here is a quick overview:
 
 - `aoresult_t` the global list of error codes in the _aolibs_ (enumeration data type).
 
-- `aoresult_to_str()` converts an error code to a (short) string or a (longer) description.
+- `aoresult_to_str(result)` converts an error code to a (short) string or a (longer) description.
 
 - `AORESULT_ASSERT(cond)` Checks if `cond` holds, if not, prints error to `Serial`, and stops.
+   Uses helper function `aoresult_shorten(filename)`.
 
 - Finally, there is the macro `AORESULT_VERSION`, which identifies the version of the library.
 
 
 ## Version history _aoresult_
+
+- **2024 sep 5, 0.4.1**
+  - Split example `aoresult_assert.ino` from `aoresult_demo.ino`.
+  - API section in readme now shows parameter names.
 
 - **2024 aug 28, 0.4.0**
   - Added links in `readme.md` for all example sketches.

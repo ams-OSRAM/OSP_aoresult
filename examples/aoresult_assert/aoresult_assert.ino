@@ -1,4 +1,4 @@
-// aoresult_demo.ino - demo of the convert-result-to-string feature of the aoresult library
+// aoresult_assert.ino - demo of the assert feature of the aoresult library
 /*****************************************************************************
  * Copyright 2024 by ams OSRAM AG                                            *
  * All rights are reserved.                                                  *
@@ -23,8 +23,8 @@
 
 /*
 DESCRIPTION
-This demo shows how to convert the result codes from the aoresult lib
-to strings.
+This demo shows how to use the assert feature of the aoresult library.
+Patch the definition of `AORESULT_ASSERT` if a debugger is attached.
 
 HARDWARE
 The demo runs on the OSP32 board, no demo board needs to be attached.
@@ -32,30 +32,29 @@ In Arduino select board "ESP32S3 Dev Module".
 Since this demo does not use any OSP related hardware, any ESP32[S3] will do.
 
 OUTPUT
-Welcome to aoresult_demo.ino
+Welcome to aoresult_assert.ino
 Lib version 0.4.0
-  0 | ok               | Success (no error)
-  1 | assert           | This should not happen (dynamically checked assert)
- 10 | spi_buf          | Illegal buffer input parameter (null pointer, illegal size)
-999 | <unknown>        | Unknown error code for aoresult_t
+count 0
+count 1
+count 2
+count 3
+count 4
+ASSERT( count < 5 ) in aoresult_assert.ino line 59
 */
 
 
-void show( aoresult_t result ) {
-  Serial.printf("%3d | %-16s | %s\n", result, aoresult_to_str(result), aoresult_to_str(result,1) );
-}
-
-
+int count;
 void setup() {
   Serial.begin(115200);
-  Serial.printf("\n\nWelcome to aoresult_demo.ino\n");
+  Serial.printf("\n\nWelcome to aoresult_assert.ino\n");
   Serial.printf("Lib version %s\n", AORESULT_VERSION );
 
-  show( aoresult_ok );
-  show( aoresult_assert );
-  show( aoresult_spi_buf );
-  show( (aoresult_t)999 );
+  count=0;
 }
 
 void loop() {
+  delay(2000);
+  Serial.printf("count %d\n",count);
+  count += 1;
+  AORESULT_ASSERT( count < 5 );
 }
