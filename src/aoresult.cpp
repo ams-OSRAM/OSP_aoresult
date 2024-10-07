@@ -61,7 +61,7 @@ const char * aoresult_to_str(aoresult_t result, int verbose) {
     case aoresult_sys_nodecfg      : return verbose==0 ? "sys_nodecfg"     : "OSP node has unexpected config (star, sync, haptic, cluster, ...)";
 
     case aoresult_dev_noi2cbridge  : return verbose==0 ? "dev_noi2cbridge" : "Missing (OSP node with) I2C bridge";
-    case aoresult_dev_noi2cdev     : return verbose==0 ? "dev_noi2cdev"    : "Missing specific I2C device (eg when app needs EEPROM or IOExpander)";
+    case aoresult_dev_noi2cdev     : return verbose==0 ? "dev_noi2cdev"    : "Missing specific I2C device (eg app needs EEPROM or I/O-Expander)";
     case aoresult_dev_i2ctimeout   : return verbose==0 ? "dev_i2ctimeout"  : "I2C transaction took too long to complete";
     case aoresult_dev_i2cnack      : return verbose==0 ? "dev_i2cnack"     : "I2C transaction completed with NACK";
   }

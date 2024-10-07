@@ -23,7 +23,7 @@
 
 
 // Identifies lib version
-#define AORESULT_VERSION "0.4.1"
+#define AORESULT_VERSION "0.4.2"
 
 
 // For detailed meaning, see aoresult_to_str()
@@ -81,7 +81,7 @@ const char * aoresult_shorten( const char * file);
 #define AORESULT_ASSERT(cond) \
   if( !(cond) ) { \
     Serial.printf("ASSERT( %s ) in %s line %d\n", #cond, aoresult_shorten(__FILE__), __LINE__ ); \
-    /* asm("break.n 1"); */ while(1) ; /*wait*/ \
+    /* asm("break.n 1"); */ while(1) /*wait*/ ; \
   }
 
 #endif
