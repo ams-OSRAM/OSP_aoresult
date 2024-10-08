@@ -23,7 +23,7 @@
 
 
 // Identifies lib version
-#define AORESULT_VERSION "0.4.2"
+#define AORESULT_VERSION "0.4.3"
 
 
 // For detailed meaning, see aoresult_to_str()

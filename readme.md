@@ -17,6 +17,12 @@ As a result, library _aoresult_ is relatively empty.
 
 ![aoresult in context](extras/aolibs-aoresult.drawio.png)
 
+The error codes could have been integrated in the next library 
+in the hierarchy (_aospi_), and _aoresult_ would be superfluous. 
+However, _aospi_ likely needs variants (supporting other MCUs, 
+1-wire SPI, dropping mux support) so splitting off the error codes 
+in a separate library _aoresult_ makes sense.
+
 
 ## Examples
 
@@ -53,19 +59,22 @@ Here is a quick overview:
 
 ## Version history _aoresult_
 
-- **2024 oct 7, 0.4.2**
+- **2024 October 8, 0.4.3**
+  - Explained why separate library.
+
+- **2024 October 7, 0.4.2**
   - Small textual updates of error messages
   - Moved domain from `github.com/ams-OSRAM-Group` to `github.com/ams-OSRAM`.
   
-- **2024 sep 5, 0.4.1**
+- **2024 September 5, 0.4.1**
   - Split example `aoresult_assert.ino` from `aoresult_demo.ino`.
   - API section in readme now shows parameter names.
 
-- **2024 aug 28, 0.4.0**
+- **2024 August 28, 0.4.0**
   - Added links in `readme.md` for all example sketches.
   - Added error `aoresult_sys_nodecfg`.
 
-- **2024 aug 9, 0.3.0**
+- **2024 August 9, 0.3.0**
   - Added error `aoresult_sys_wrongtopo`.
 
 - **2024 August 5, 0.2.1**  
