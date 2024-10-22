@@ -59,6 +59,10 @@ Here is a quick overview:
 
 ## Version history _aoresult_
 
+- **2024 October 22, 0.4.4**
+  - Removed hard coupling from names to integers; added `aoresult_numresultcodes`.
+  - Added `aoresult_osp_psi`.
+
 - **2024 October 8, 0.4.3**
   - Explained why separate library.
 

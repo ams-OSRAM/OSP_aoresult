@@ -33,14 +33,16 @@ Since this demo does not use any OSP related hardware, any ESP32[S3] will do.
 
 OUTPUT
 Welcome to aoresult_demo.ino
-Lib version 0.4.0
+Lib version 0.4.4
   0 | ok               | Success (no error)
   1 | assert           | This should not happen (dynamically checked assert)
- 10 | spi_buf          | Illegal buffer input parameter (null pointer, illegal size)
+  6 | spi_buf          | Illegal buffer input parameter (null pointer, illegal size)
+ 23 | dev_i2cnack      | I2C transaction completed with NACK
 999 | <unknown>        | Unknown error code for aoresult_t
 */
 
 
+// Print raw result code, its short string and its long string
 void show( aoresult_t result ) {
   Serial.printf("%3d | %-16s | %s\n", result, aoresult_to_str(result), aoresult_to_str(result,1) );
 }
@@ -54,6 +56,7 @@ void setup() {
   show( aoresult_ok );
   show( aoresult_assert );
   show( aoresult_spi_buf );
+  show( aoresult_dev_i2cnack );
   show( (aoresult_t)999 );
 }
 

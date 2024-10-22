@@ -53,6 +53,7 @@ const char * aoresult_to_str(aoresult_t result, int verbose) {
     case aoresult_osp_preamble     : return verbose==0 ? "osp_preamble"    : "Preamble incorrect in response telegram";
     case aoresult_osp_tid          : return verbose==0 ? "osp_tid"         : "Unexpected telegram ID in response telegram";
     case aoresult_osp_size         : return verbose==0 ? "osp_size"        : "Unexpected size for response telegram";
+    case aoresult_osp_psi          : return verbose==0 ? "osp_psi"         : "Unexpected PSI in response telegram";
     case aoresult_osp_crc          : return verbose==0 ? "osp_crc"         : "CRC mismatch in response telegram";
     
     case aoresult_sys_cabling      : return verbose==0 ? "sys_cabling"     : "Resetinit failed: cable (loop) or terminator (bidir) missing";
@@ -64,6 +65,8 @@ const char * aoresult_to_str(aoresult_t result, int verbose) {
     case aoresult_dev_noi2cdev     : return verbose==0 ? "dev_noi2cdev"    : "Missing specific I2C device (eg app needs EEPROM or I/O-Expander)";
     case aoresult_dev_i2ctimeout   : return verbose==0 ? "dev_i2ctimeout"  : "I2C transaction took too long to complete";
     case aoresult_dev_i2cnack      : return verbose==0 ? "dev_i2cnack"     : "I2C transaction completed with NACK";
+
+    case aoresult_numresultcodes   : return verbose==0 ? "<illegal>"       : "Illegal error code aoresult_numresultcodes";
   }
   // By not having a default in the switch, a good compiler gives a warning when a case/tag is forgotten.
   return verbose==0 ? "<unknown>"      : "Unknown error code for aoresult_t";

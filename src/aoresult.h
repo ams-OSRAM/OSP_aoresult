@@ -23,43 +23,46 @@
 
 
 // Identifies lib version
-#define AORESULT_VERSION "0.4.3"
+#define AORESULT_VERSION "0.4.4"
 
 
 // For detailed meaning, see aoresult_to_str()
 typedef enum aoresult_e {
   // General errors
-  aoresult_ok              =  0,
-  aoresult_assert          =  1,
-  aoresult_outargnull      =  2,
-  aoresult_outofmem        =  3,
-  aoresult_comparefail     =  4,
-  aoresult_other           =  5,
-                             
-  // Errors from aospi       
-  aoresult_spi_buf         = 10,
-  aoresult_spi_noclock     = 11,
-  aoresult_spi_length      = 12,
-                             
-  // Errors for aoosp        
-  aoresult_osp_arg         = 20,
-  aoresult_osp_addr        = 21,
-  aoresult_osp_preamble    = 22,
-  aoresult_osp_tid         = 23,
-  aoresult_osp_size        = 24,
-  aoresult_osp_crc         = 25,
-  
+  aoresult_ok              , //  0
+  aoresult_assert          , //  1
+  aoresult_outargnull      , //  2
+  aoresult_outofmem        , //  3
+  aoresult_comparefail     , //  4
+  aoresult_other           , //  5
+
+  // Errors from aospi
+  aoresult_spi_buf         , //  6
+  aoresult_spi_noclock     , //  7
+  aoresult_spi_length      , //  8
+
+  // Errors for aoosp
+  aoresult_osp_arg         , //  9
+  aoresult_osp_addr        , // 10
+  aoresult_osp_preamble    , // 11
+  aoresult_osp_tid         , // 12
+  aoresult_osp_size        , // 13
+  aoresult_osp_psi         , // 14
+  aoresult_osp_crc         , // 15
+
   // Errors on OSP system
-  aoresult_sys_cabling     = 30,
-  aoresult_sys_id          = 31,
-  aoresult_sys_wrongtopo   = 32,
-  aoresult_sys_nodecfg     = 33,
-  
+  aoresult_sys_cabling     , // 16
+  aoresult_sys_id          , // 17
+  aoresult_sys_wrongtopo   , // 18
+  aoresult_sys_nodecfg     , // 19
+
   // Errors for attached devices
-  aoresult_dev_noi2cbridge = 40,
-  aoresult_dev_noi2cdev    = 41,
-  aoresult_dev_i2ctimeout  = 42,
-  aoresult_dev_i2cnack     = 43,
+  aoresult_dev_noi2cbridge , // 20
+  aoresult_dev_noi2cdev    , // 21
+  aoresult_dev_i2ctimeout  , // 22
+  aoresult_dev_i2cnack     , // 23
+  
+  aoresult_numresultcodes    // 24 keep this as last
 } aoresult_t;
 
 
