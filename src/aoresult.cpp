@@ -55,6 +55,7 @@ const char * aoresult_to_str(aoresult_t result, int verbose) {
     case aoresult_osp_size         : return verbose==0 ? "osp_size"        : "Unexpected size for response telegram";
     case aoresult_osp_psi          : return verbose==0 ? "osp_psi"         : "Unexpected PSI in response telegram";
     case aoresult_osp_crc          : return verbose==0 ? "osp_crc"         : "CRC mismatch in response telegram";
+    case aoresult_osp_nosr         : return verbose==0 ? "osp_nosr"        : "Telegram not acknowledged (eg settestpw_sr)";
     
     case aoresult_sys_cabling      : return verbose==0 ? "sys_cabling"     : "Resetinit failed: cable (loop) or terminator (bidir) missing";
     case aoresult_sys_id           : return verbose==0 ? "sys_id"          : "Unexpected or unknown OSP node ID";
@@ -62,7 +63,7 @@ const char * aoresult_to_str(aoresult_t result, int verbose) {
     case aoresult_sys_nodecfg      : return verbose==0 ? "sys_nodecfg"     : "OSP node has unexpected config (star, sync, haptic, cluster, ...)";
 
     case aoresult_dev_noi2cbridge  : return verbose==0 ? "dev_noi2cbridge" : "Missing (OSP node with) I2C bridge";
-    case aoresult_dev_noi2cdev     : return verbose==0 ? "dev_noi2cdev"    : "Missing specific I2C device (eg app needs EEPROM or I/O-Expander)";
+    case aoresult_dev_noi2cdev     : return verbose==0 ? "dev_noi2cdev"    : "Missing specific I2C device (eg app needs EEPROM or I/O-expander)";
     case aoresult_dev_i2ctimeout   : return verbose==0 ? "dev_i2ctimeout"  : "I2C transaction took too long to complete";
     case aoresult_dev_i2cnack      : return verbose==0 ? "dev_i2cnack"     : "I2C transaction completed with NACK";
 

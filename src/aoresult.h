@@ -23,7 +23,7 @@
 
 
 // Identifies lib version
-#define AORESULT_VERSION "0.4.4"
+#define AORESULT_VERSION "0.4.5"
 
 
 // For detailed meaning, see aoresult_to_str()
@@ -49,20 +49,21 @@ typedef enum aoresult_e {
   aoresult_osp_size        , // 13
   aoresult_osp_psi         , // 14
   aoresult_osp_crc         , // 15
+  aoresult_osp_nosr        , // 16
 
   // Errors on OSP system
-  aoresult_sys_cabling     , // 16
-  aoresult_sys_id          , // 17
-  aoresult_sys_wrongtopo   , // 18
-  aoresult_sys_nodecfg     , // 19
+  aoresult_sys_cabling     , // 17
+  aoresult_sys_id          , // 18
+  aoresult_sys_wrongtopo   , // 19
+  aoresult_sys_nodecfg     , // 20
 
   // Errors for attached devices
-  aoresult_dev_noi2cbridge , // 20
-  aoresult_dev_noi2cdev    , // 21
-  aoresult_dev_i2ctimeout  , // 22
-  aoresult_dev_i2cnack     , // 23
+  aoresult_dev_noi2cbridge , // 21
+  aoresult_dev_noi2cdev    , // 22
+  aoresult_dev_i2ctimeout  , // 23
+  aoresult_dev_i2cnack     , // 24
   
-  aoresult_numresultcodes    // 24 keep this as last
+  aoresult_numresultcodes    // 25 keep this as last
 } aoresult_t;
 
 

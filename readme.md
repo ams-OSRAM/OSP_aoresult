@@ -59,6 +59,11 @@ Here is a quick overview:
 
 ## Version history _aoresult_
 
+- **2024 November 29, 0.4.5**
+  - Added error `aoresult_osp_nosr` for missing acknowledge.
+  - Small updates in `aoresult_demo.ino`.
+  - Fixed a typo.
+
 - **2024 October 22, 0.4.4**
   - Removed hard coupling from names to integers; added `aoresult_numresultcodes`.
   - Added `aoresult_osp_psi`.

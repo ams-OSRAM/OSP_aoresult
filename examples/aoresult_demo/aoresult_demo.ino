@@ -36,8 +36,10 @@ Welcome to aoresult_demo.ino
 Lib version 0.4.4
   0 | ok               | Success (no error)
   1 | assert           | This should not happen (dynamically checked assert)
-  6 | spi_buf          | Illegal buffer input parameter (null pointer, illegal size)
+  7 | spi_noclock      | No clock signal detected for response telegram
  23 | dev_i2cnack      | I2C transaction completed with NACK
+ 24 | <illegal>        | Illegal error code aoresult_numresultcodes
+ -1 | <unknown>        | Unknown error code for aoresult_t
 999 | <unknown>        | Unknown error code for aoresult_t
 */
 
@@ -55,10 +57,14 @@ void setup() {
 
   show( aoresult_ok );
   show( aoresult_assert );
-  show( aoresult_spi_buf );
+  show( aoresult_spi_noclock );
   show( aoresult_dev_i2cnack );
+
+  show( aoresult_numresultcodes );
+  show( (aoresult_t)-1 );
   show( (aoresult_t)999 );
 }
+
 
 void loop() {
 }
