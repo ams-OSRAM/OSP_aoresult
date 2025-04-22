@@ -59,6 +59,9 @@ Here is a quick overview:
 
 ## Version history _aoresult_
 
+- **2025 April 22, 0.4.6**
+  - Made `aoresult.h` self contained: added `#include <Arduino.h>` for `Serial` in `AORESULT_ASSERT()`.
+  
 - **2024 November 29, 0.4.5**
   - Added error `aoresult_osp_nosr` for missing acknowledge.
   - Small updates in `aoresult_demo.ino`.

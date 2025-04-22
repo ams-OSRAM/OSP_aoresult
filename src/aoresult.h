@@ -1,6 +1,6 @@
 // aoresult.h - list of all error codes in any of the aolibs.
 /*****************************************************************************
- * Copyright 2024 by ams OSRAM AG                                            *
+ * Copyright 2024,2025 by ams OSRAM AG                                       *
  * All rights are reserved.                                                  *
  *                                                                           *
  * IMPORTANT - PLEASE READ CAREFULLY BEFORE COPYING, INSTALLING OR USING     *
@@ -22,8 +22,11 @@
 #define _AORESULT_H_
 
 
+#include <Arduino.h>         // Serial in AORESULT_ASSERT()
+
+
 // Identifies lib version
-#define AORESULT_VERSION "0.4.5"
+#define AORESULT_VERSION "0.4.6"
 
 
 // For detailed meaning, see aoresult_to_str()
