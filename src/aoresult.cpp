@@ -1,6 +1,6 @@
 // aoresult.cpp - list of all error codes in any of the aolibs.
 /*****************************************************************************
- * Copyright 2024 by ams OSRAM AG                                            *
+ * Copyright 2024,2025 by ams OSRAM AG                                       *
  * All rights are reserved.                                                  *
  *                                                                           *
  * IMPORTANT - PLEASE READ CAREFULLY BEFORE COPYING, INSTALLING OR USING     *
@@ -48,7 +48,8 @@ const char * aoresult_to_str(aoresult_t result, int verbose) {
     case aoresult_spi_noclock      : return verbose==0 ? "spi_noclock"     : "No clock signal detected for response telegram";
     case aoresult_spi_length       : return verbose==0 ? "spi_length"      : "Response telegram length differs from requested";
 
-    case aoresult_osp_arg          : return verbose==0 ? "osp_arg"         : "An OSP telegram argument has an illegal value";
+    case aoresult_osp_arg          : return verbose==0 ? "osp_arg"         : "An OSP telegram argument has an illegal (out of range) value";
+    case aoresult_osp_argsize      : return verbose==0 ? "osp_argsize"     : "An OSP telegram (buf) argument causes illegal telegram size";
     case aoresult_osp_addr         : return verbose==0 ? "osp_addr"        : "The address for an OSP telegram is illegal";
     case aoresult_osp_preamble     : return verbose==0 ? "osp_preamble"    : "Preamble incorrect in response telegram";
     case aoresult_osp_tid          : return verbose==0 ? "osp_tid"         : "Unexpected telegram ID in response telegram";
@@ -66,6 +67,7 @@ const char * aoresult_to_str(aoresult_t result, int verbose) {
     case aoresult_dev_noi2cdev     : return verbose==0 ? "dev_noi2cdev"    : "Missing specific I2C device (eg app needs EEPROM or I/O-expander)";
     case aoresult_dev_i2ctimeout   : return verbose==0 ? "dev_i2ctimeout"  : "I2C transaction took too long to complete";
     case aoresult_dev_i2cnack      : return verbose==0 ? "dev_i2cnack"     : "I2C transaction completed with NACK";
+    case aoresult_dev_i2cmode      : return verbose==0 ? "dev_i2cmode"     : "I2C telegram not compatible with (8 or12 bit) mode";
 
     case aoresult_numresultcodes   : return verbose==0 ? "<illegal>"       : "Illegal error code aoresult_numresultcodes";
   }

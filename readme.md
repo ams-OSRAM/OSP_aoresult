@@ -28,7 +28,7 @@ in a separate library _aoresult_ makes sense.
 
 This library comes with the following examples.
 You can find them in the Arduino IDE via 
-File > Examples > OSP ResultCodes aoresult > ...
+[File > Examples > OSP ResultCodes aoresult > ...](examples):
 
 - **aoresult_demo** ([source](examples/aoresult_demo))  
   This demo shows how to convert the result codes from the aoresult lib
@@ -59,9 +59,13 @@ Here is a quick overview:
 
 ## Version history _aoresult_
 
+- **2025 September 16, 0.5.0**
+  - Added error `aoresult_dev_i2cmode` and `aoresult_osp_argsize` to better support I2C in modes 8 and 12.
+  - Added link to examples.
+
 - **2025 April 22, 0.4.6**
   - Made `aoresult.h` self contained: added `#include <Arduino.h>` for `Serial` in `AORESULT_ASSERT()`.
-  
+
 - **2024 November 29, 0.4.5**
   - Added error `aoresult_osp_nosr` for missing acknowledge.
   - Small updates in `aoresult_demo.ino`.

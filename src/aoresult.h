@@ -26,7 +26,7 @@
 
 
 // Identifies lib version
-#define AORESULT_VERSION "0.4.6"
+#define AORESULT_VERSION "0.5.0"
 
 
 // For detailed meaning, see aoresult_to_str()
@@ -46,27 +46,29 @@ typedef enum aoresult_e {
 
   // Errors for aoosp
   aoresult_osp_arg         , //  9
-  aoresult_osp_addr        , // 10
-  aoresult_osp_preamble    , // 11
-  aoresult_osp_tid         , // 12
-  aoresult_osp_size        , // 13
-  aoresult_osp_psi         , // 14
-  aoresult_osp_crc         , // 15
-  aoresult_osp_nosr        , // 16
+  aoresult_osp_argsize     , // 10
+  aoresult_osp_addr        , // 11
+  aoresult_osp_preamble    , // 12
+  aoresult_osp_tid         , // 13
+  aoresult_osp_size        , // 14
+  aoresult_osp_psi         , // 15
+  aoresult_osp_crc         , // 16
+  aoresult_osp_nosr        , // 17
 
   // Errors on OSP system
-  aoresult_sys_cabling     , // 17
-  aoresult_sys_id          , // 18
-  aoresult_sys_wrongtopo   , // 19
-  aoresult_sys_nodecfg     , // 20
+  aoresult_sys_cabling     , // 18
+  aoresult_sys_id          , // 19
+  aoresult_sys_wrongtopo   , // 20
+  aoresult_sys_nodecfg     , // 21
 
   // Errors for attached devices
-  aoresult_dev_noi2cbridge , // 21
-  aoresult_dev_noi2cdev    , // 22
-  aoresult_dev_i2ctimeout  , // 23
-  aoresult_dev_i2cnack     , // 24
+  aoresult_dev_noi2cbridge , // 22
+  aoresult_dev_noi2cdev    , // 23
+  aoresult_dev_i2ctimeout  , // 24
+  aoresult_dev_i2cnack     , // 25
+  aoresult_dev_i2cmode     , // 26
   
-  aoresult_numresultcodes    // 25 keep this as last
+  aoresult_numresultcodes    // 27 keep this as last
 } aoresult_t;
 
 
