@@ -39,6 +39,17 @@ You can find them in the Arduino IDE via
   Patch the definition of `AORESULT_ASSERT` if a debugger is attached.
 
 
+## Module architecture
+
+This library contains only 1 module, see figure below (arrows indicate `#include`).
+
+![Modules](extras/aoresult-modules.drawio.png)
+
+- **aoresult** ([`aoresult.cpp`](src/aoresult.cpp) and [`aoresult.h`](src/aoresult.h)) 
+  is a small module that implements an `enum` with all error codes and a function to 
+  pretty print error codes.
+
+
 ## API
 
 The header [aoresult.h](src/aoresult.h) contains the API of this library.
@@ -58,6 +69,14 @@ Here is a quick overview:
 
 
 ## Version history _aoresult_
+
+- **2026 November 27, 0.7.0**
+  - Introduced new names ("data link" instead of "SPI") for three results codes, 
+    retaining the deprecated names: `aoresult_lnk_buf` (for `aoresult_spi_buf`), 
+    `aoresult_lnk_nosignal` (for `aoresult_spi_noclock`) and `aoresult_lnk_length` 
+    (for `aoresult_spi_length`).
+  - Update of `aoresult_demo.ino` for the new names.
+  - Added "Module architecture" section.
 
 - **2026 April 21, 0.6.0**
   - Added error `aoresult_dev_wrongval` to support I2C devices with different revisions, markers or CRC.
@@ -111,5 +130,6 @@ Here is a quick overview:
 
 - **2024 July 02, 0.1.10**  
   - Initial release candidate.
+
 
 (end)

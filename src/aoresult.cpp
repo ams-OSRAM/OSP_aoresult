@@ -44,9 +44,9 @@ const char * aoresult_to_str(aoresult_t result, int verbose) {
     case aoresult_comparefail      : return verbose==0 ? "comparefail"     : "Comparison (eg eeprom) between expected an actual failed";
     case aoresult_other            : return verbose==0 ? "other"           : "Other error - not further specified";
     
-    case aoresult_spi_buf          : return verbose==0 ? "spi_buf"         : "Illegal buffer input parameter (null pointer, illegal size)";
-    case aoresult_spi_noclock      : return verbose==0 ? "spi_noclock"     : "No clock signal detected for response telegram";
-    case aoresult_spi_length       : return verbose==0 ? "spi_length"      : "Response telegram length differs from requested";
+    case aoresult_lnk_buf          : return verbose==0 ? "lnk_buf"         : "Illegal buffer input parameter (null pointer, illegal size)";
+    case aoresult_lnk_nosignal     : return verbose==0 ? "lnk_nosignal"    : "No signal detected for response telegram";
+    case aoresult_lnk_length       : return verbose==0 ? "lnk_length"      : "Response telegram length differs from requested";
 
     case aoresult_osp_arg          : return verbose==0 ? "osp_arg"         : "An OSP telegram argument has an illegal (out of range) value";
     case aoresult_osp_argsize      : return verbose==0 ? "osp_argsize"     : "An OSP telegram (buf) argument causes illegal telegram size";

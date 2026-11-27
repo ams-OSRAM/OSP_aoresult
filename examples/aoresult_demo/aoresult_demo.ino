@@ -1,6 +1,6 @@
 // aoresult_demo.ino - demo of the convert-result-to-string feature of the aoresult library
 /*****************************************************************************
- * Copyright 2024 by ams OSRAM AG                                            *
+ * Copyright 2024-2026 by ams OSRAM AG                                       *
  * All rights are reserved.                                                  *
  *                                                                           *
  * IMPORTANT - PLEASE READ CAREFULLY BEFORE COPYING, INSTALLING OR USING     *
@@ -33,7 +33,7 @@ Since this demo does not use any OSP related hardware, any ESP32[S3] will do.
 
 OUTPUT
 Welcome to aoresult_demo.ino
-Lib version 0.5.0
+Lib version 0.6.0
   0 | ok               | Success (no error)
   1 | assert           | This should not happen (dynamically checked assert)
   7 | spi_noclock      | No clock signal detected for response telegram
@@ -57,7 +57,7 @@ void setup() {
 
   show( aoresult_ok );
   show( aoresult_assert );
-  show( aoresult_spi_noclock );
+  show( aoresult_lnk_nosignal );
   show( aoresult_dev_i2cnack );
 
   show( aoresult_numresultcodes );

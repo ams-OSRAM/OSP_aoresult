@@ -22,11 +22,11 @@
 #define _AORESULT_H_
 
 
-#include <Arduino.h>         // Serial in AORESULT_ASSERT()
+#include <Arduino.h> // for Serial in AORESULT_ASSERT()
 
 
 // Identifies lib version
-#define AORESULT_VERSION "0.6.0"
+#define AORESULT_VERSION "0.7.0"
 
 
 // For detailed meaning, see aoresult_to_str()
@@ -40,11 +40,14 @@ typedef enum aoresult_e {
   aoresult_other           , //  5
 
   // Errors from aospi
-  aoresult_spi_buf         , //  6
-  aoresult_spi_noclock     , //  7
-  aoresult_spi_length      , //  8
+  aoresult_lnk_buf         , //  6
+  aoresult_lnk_nosignal    , //  7
+  aoresult_lnk_length      , //  8
+#define aoresult_spi_buf      aoresult_lnk_buf      // todo: delete deprecated name
+#define aoresult_spi_noclock  aoresult_lnk_nosignal // todo: delete deprecated name
+#define aoresult_spi_length   aoresult_lnk_length   // todo: delete deprecated name
 
-  // Errors for aoosp
+  // Errors for network layer
   aoresult_osp_arg         , //  9
   aoresult_osp_argsize     , // 10
   aoresult_osp_addr        , // 11
@@ -84,7 +87,7 @@ const char * aoresult_shorten( const char * file);
 /*!
     @brief  Checks if `cond` holds, if not, prints error to Serial, and stops.
     @param  cond
-            Condition to be checked for true-ness
+            Condition to be checked for true-ness.
     @note   If `cond` does not hold program stops.
     @note   If a debugger is connected, un-comment the break instruction.
 */
